@@ -1,8 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 
-class Splash extends StatelessWidget {
-  const Splash({super.key});
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 1), () async {
+      await Navigator.of(context).pushNamedAndRemoveUntil(
+        '/',
+        (route) => false,
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

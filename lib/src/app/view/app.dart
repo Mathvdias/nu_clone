@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nu_clone/src/app/app.dart';
+import 'package:nu_clone/src/pages/home/home.dart';
 import 'package:nu_clone/src/pages/splash/splash.dart';
 
 class App extends StatelessWidget {
@@ -12,8 +13,8 @@ class App extends StatelessWidget {
       theme: theme,
       initialRoute: '/splash',
       routes: {
-        '/': (_) => Container(),
-        '/splash': (_) => const Splash(),
+        '/': (_) => const HomePage(),
+        '/splash': (_) => const SplashPage(),
         '/log': (_) => const Placeholder(),
       },
     );
